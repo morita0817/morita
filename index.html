@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의 첫 웹페이지</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #eef2ff, #f8fafc);
+      color: #1e293b;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: min(90%, 600px);
+      padding: 40px;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    h1 { margin-top: 0; font-size: 2.5rem; }
+    p { line-height: 1.7; }
+
+    button {
+      border: 0;
+      padding: 13px 24px;
+      border-radius: 999px;
+      background: #4f46e5;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>안녕하세요 👋</h1>
+    <p>이것은 그냥 만든 HTML 웹페이지입니다.</p>
+    <p id="message">버튼을 눌러보세요.</p>
+    <button onclick="changeMessage()">눌러보기</button>
+  </main>
+
+  <script>
+    function changeMessage() {
+      document.getElementById("message").textContent =
+        "버튼이 눌렸습니다! JavaScript도 정상 작동합니다 🎉";
+    }
+  </script>
+</body>
+</html>
